@@ -1,2 +1,5 @@
 # vue-standardDocs
-vue project standard docs 
+
+vue开发规范文档
+
+> 文档编写 [docsify](https://docsify.js.org/#/)
