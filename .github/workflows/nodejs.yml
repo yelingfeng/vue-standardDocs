@@ -16,7 +16,7 @@ jobs:
       - name: Deploy yelingfeng.github.io/vue-standardDocs/gh-pages
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.DOCS_TEST }}
+          ACTIONS_DEPLOY_KEY: ${{ secrets.YLF }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: docs/.vuepress/dist
         with:
