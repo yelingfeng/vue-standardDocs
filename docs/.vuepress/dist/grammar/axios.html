@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>axios | Docs</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.1">
+    
+    
+    <link rel="preload" href="/vue-standardDocs/assets/css/0.styles.3d6792df.css" as="style"><link rel="preload" href="/vue-standardDocs/assets/js/app.2e3ca736.js" as="script"><link rel="preload" href="/vue-standardDocs/assets/js/2.ab385d91.js" as="script"><link rel="preload" href="/vue-standardDocs/assets/js/9.ff318c75.js" as="script"><link rel="prefetch" href="/vue-standardDocs/assets/js/10.8dbe5fcd.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/11.bb35ea0d.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/12.b4fd7127.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/13.df6f754f.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/3.476b117a.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/4.cd63b7b1.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/5.aba35502.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/6.10179fb3.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/7.9a097d3b.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/8.57a2b8ad.js">
+    <link rel="stylesheet" href="/vue-standardDocs/assets/css/0.styles.3d6792df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-standardDocs/" class="home-link router-link-active"><!----> <span class="site-name">Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-standardDocs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vue-standardDocs/initialization/" class="nav-link">
+  环境
+</a></div><div class="nav-item"><a href="/vue-standardDocs/use/" class="nav-link">
+  使用
+</a></div><div class="nav-item"><a href="/vue-standardDocs/info/" class="nav-link">
+  技术栈
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="规范" class="dropdown-title"><span class="title">规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-standardDocs/grammar/typescript.html" class="nav-link">
+  /ts
+</a></li><li class="dropdown-item"><!----> <a href="/vue-standardDocs/grammar/css.html" class="nav-link">
+  /css
+</a></li><li class="dropdown-item"><!----> <a href="/vue-standardDocs/grammar/axios.html" class="nav-link router-link-exact-active router-link-active">
+  /axios
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-standardDocs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vue-standardDocs/initialization/" class="nav-link">
+  环境
+</a></div><div class="nav-item"><a href="/vue-standardDocs/use/" class="nav-link">
+  使用
+</a></div><div class="nav-item"><a href="/vue-standardDocs/info/" class="nav-link">
+  技术栈
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="规范" class="dropdown-title"><span class="title">规范</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-standardDocs/grammar/typescript.html" class="nav-link">
+  /ts
+</a></li><li class="dropdown-item"><!----> <a href="/vue-standardDocs/grammar/css.html" class="nav-link">
+  /css
+</a></li><li class="dropdown-item"><!----> <a href="/vue-standardDocs/grammar/axios.html" class="nav-link router-link-exact-active router-link-active">
+  /axios
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>axios</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-standardDocs/grammar/axios.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="axios"><a href="#axios" class="header-anchor">#</a> axios</h1> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> http <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/common/request'</span>
+
+
+<span class="token comment">// get</span>
+http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/demo/getData'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">resp</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> paramData <span class="token operator">=</span> <span class="token punctuation">{</span>
+    id <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    name <span class="token operator">:</span> 'user
+<span class="token punctuation">}</span>
+<span class="token comment">// post</span>
+http<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'xxx/xxx'</span><span class="token punctuation">,</span>paramData<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">resp</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vue-standardDocs/assets/js/app.2e3ca736.js" defer></script><script src="/vue-standardDocs/assets/js/2.ab385d91.js" defer></script><script src="/vue-standardDocs/assets/js/9.ff318c75.js" defer></script>
+  </body>
+</html>

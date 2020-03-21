@@ -1,0 +1,14 @@
+{
+  "name": "standarDocs",
+  "version": "v2.0",
+  "description": "for typescript ",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "yelingfeng",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.4.0"
+  }
+}
