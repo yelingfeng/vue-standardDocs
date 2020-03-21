@@ -1,7 +1,13 @@
-# vue-standardDocs
+<!--
+ * @Author: renxiaofan
+ * @Date: 2020-03-21 17:44:57
+ * @LastEditors: renxiaofan
+ * @LastEditTime: 2020-03-21 18:46:10
+ * @Description:
+ -->
 
-vue开发规范文档
+# vue-standardDocs-ts
 
-[online](https://yelingfeng.github.io/vue-standardDocs/)
+开发规范文档 ts 版本
 
-> 文档编写 [docsify](https://docsify.js.org/#/)
+[standardDocs](https://yelingfeng.github.io/vue-standardDocs/)
