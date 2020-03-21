@@ -4,7 +4,8 @@
   "description": "for typescript ",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "push": "node  ./index.js"
   },
   "author": "yelingfeng",
   "license": "MIT",
