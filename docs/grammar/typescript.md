@@ -75,6 +75,16 @@ interface IProps {
   |  --- FlowInXXXXX   --------  二级业务模块
 ```
 
+7. `业务级别通用代码`
+
+`views`下`Common`文件夹
+```
+|Views
+|---- Common/  
+
+```
+
+
 ## 变量
 
 ### 变量名定义
