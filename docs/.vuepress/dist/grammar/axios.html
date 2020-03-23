@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>axios | Docs</title>
+    <title>Docs</title>
     <meta name="description" content="">
     <meta name="generator" content="VuePress 1.4.0">
     
     
-    <link rel="preload" href="/vue-standardDocs/assets/css/0.styles.38166288.css" as="style"><link rel="preload" href="/vue-standardDocs/assets/js/app.8cb7e007.js" as="script"><link rel="preload" href="/vue-standardDocs/assets/js/2.e31d8d91.js" as="script"><link rel="preload" href="/vue-standardDocs/assets/js/9.f236a09d.js" as="script"><link rel="prefetch" href="/vue-standardDocs/assets/js/10.d2681b57.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/11.2ec2ee65.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/12.0f8f2cc5.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/13.df6f754f.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/3.9b75d2cc.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/4.a8053ac2.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/5.92864b53.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/6.3100120f.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/7.25f631e6.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/8.10ac1f53.js">
+    <link rel="preload" href="/vue-standardDocs/assets/css/0.styles.38166288.css" as="style"><link rel="preload" href="/vue-standardDocs/assets/js/app.729c5e1c.js" as="script"><link rel="preload" href="/vue-standardDocs/assets/js/2.e31d8d91.js" as="script"><link rel="preload" href="/vue-standardDocs/assets/js/9.69f4c9f7.js" as="script"><link rel="prefetch" href="/vue-standardDocs/assets/js/10.0e7eaba4.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/11.2ec2ee65.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/12.0f8f2cc5.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/13.df6f754f.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/3.9b75d2cc.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/4.a8053ac2.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/5.92864b53.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/6.3100120f.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/7.bffc3f65.js"><link rel="prefetch" href="/vue-standardDocs/assets/js/8.10ac1f53.js">
     <link rel="stylesheet" href="/vue-standardDocs/assets/css/0.styles.38166288.css">
   </head>
   <body>
@@ -40,23 +40,29 @@
   /css
 </a></li><li class="dropdown-item"><!----> <a href="/vue-standardDocs/grammar/axios.html" class="nav-link router-link-exact-active router-link-active">
   /axios
-</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>axios</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-standardDocs/grammar/axios.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="axios"><a href="#axios" class="header-anchor">#</a> axios</h1> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> http <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/common/request'</span>
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-standardDocs/grammar/axios.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="axios"><a href="#axios" class="header-anchor">#</a> axios</h1> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// 通用 IResponse类型</span>
+<span class="token keyword">interface</span> <span class="token class-name">IResponse</span><span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token operator">=</span> <span class="token builtin">any</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  code<span class="token operator">:</span> <span class="token builtin">number</span>
+  data <span class="token operator">:</span> <span class="token constant">T</span>
+  message<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
 
+</code></pre></div><p>iBiz 为<code>IResponse</code> 业务类型 <code>T</code></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> http <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/common/request'</span>
+
+
+<span class="token keyword">interface</span> <span class="token class-name">IBiz</span> <span class="token punctuation">{</span>
+  name <span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+  age <span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
 
 <span class="token comment">// get</span>
-http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/demo/getData'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">resp</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span>
+http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token operator">&lt;</span>IBiz<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">'/demo/getData'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">resp</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+   <span class="token keyword">const</span> bizData <span class="token operator">=</span> resp<span class="token punctuation">.</span>data
+   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>bizData<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token keyword">const</span> paramData <span class="token operator">=</span> <span class="token punctuation">{</span>
-    id <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    name <span class="token operator">:</span> 'user
-<span class="token punctuation">}</span>
-<span class="token comment">// post</span>
-http<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'xxx/xxx'</span><span class="token punctuation">,</span>paramData<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">resp</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
 
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/vue-standardDocs/assets/js/app.8cb7e007.js" defer></script><script src="/vue-standardDocs/assets/js/2.e31d8d91.js" defer></script><script src="/vue-standardDocs/assets/js/9.f236a09d.js" defer></script>
+    <script src="/vue-standardDocs/assets/js/app.729c5e1c.js" defer></script><script src="/vue-standardDocs/assets/js/2.e31d8d91.js" defer></script><script src="/vue-standardDocs/assets/js/9.69f4c9f7.js" defer></script>
   </body>
 </html>

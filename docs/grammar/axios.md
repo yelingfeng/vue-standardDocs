@@ -2,7 +2,7 @@
  * @Author: renxiaofan
  * @Date: 2020-03-21 23:22:21
  * @LastEditors: renxiaofan
- * @LastEditTime: 2020-03-23 12:40:47
+ * @LastEditTime: 2020-03-23 16:04:04
  * @Description: 
  -->
 # axios
@@ -15,7 +15,7 @@
 // 通用 IResponse类型
 interface IResponse<T = any> {
   code: number
-  data?: T
+  data : T
   message: string
 }
 
@@ -33,9 +33,9 @@ interface IBiz {
 }
 
 // get
-http<IBiz>.get('/demo/getData').then(resp => {
+http.get<IBiz>('/demo/getData').then(resp => {
    const bizData = resp.data
-   console.log(bizData)
+   console.log(bizData.name)
 })
 
 
